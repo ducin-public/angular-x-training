@@ -1,0 +1,10 @@
+<h3>Users list</h3>
+
+<page-size (sizeChanged)="handleSizeChanged($event)"></page-size>
+
+<div>
+  <spinner [isRunning]="isRequesting"></spinner>
+  <div class="row" *ngFor="let user of users | async">
+    <user-details [user]="user"></user-details>
+  </div>
+</div>
